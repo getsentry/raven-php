@@ -126,7 +126,7 @@ class Raven_Client
         }
 
         return array(
-            'servers'    => array(sprintf('%s://%s%s/api/store/', $scheme, $netloc, $path)),
+            'servers'    => array(sprintf('%s://%s%s/api/%s/store/', $scheme, $netloc, $path, $project)),
             'project'    => $project,
             'public_key' => $username,
             'secret_key' => $password,
@@ -551,7 +551,7 @@ class Raven_Client
         }
         if ($this->curl_ssl_version) {
 	        $options[CURLOPT_SSLVERSION] = $this->curl_ssl_version;
-        }        
+        }
         if (defined('CURLOPT_TIMEOUT_MS')) {
             // MS is available in curl >= 7.16.2
             $timeout = max(1, ceil(1000 * $this->timeout));
