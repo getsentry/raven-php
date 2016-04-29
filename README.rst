@@ -1,6 +1,8 @@
 raven-php
 =========
 
+DEPRECATED: Please switch to the `sentry-php <https://github.com/getsentry/sentry-php>`_ package.
+
 .. image:: https://secure.travis-ci.org/getsentry/raven-php.png?branch=master
    :target: http://travis-ci.org/getsentry/raven-php
 
